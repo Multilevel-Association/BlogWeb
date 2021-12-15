@@ -8,8 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=E:\2021-hk2\LTPython\code\BTNhom\BlogWeb\Fakebook
-
+set VIRTUAL_ENV=E:\Benkyou\Nam_III_KY_I\python\BlogWeb\Fakebook
 if not defined PROMPT set PROMPT=$P$G
 
 if defined _OLD_VIRTUAL_PROMPT set PROMPT=%_OLD_VIRTUAL_PROMPT%
