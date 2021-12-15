@@ -9,7 +9,6 @@ from werkzeug.utils import secure_filename
 views = Blueprint('views',__name__)
 
 @views.route('/', methods = ['GET', 'POST'])
-# @login_required
 def home():
     posts = Post.query.order_by(Post.timestamp.desc()).all()
     if request.method == 'POST':
@@ -70,10 +69,8 @@ def edit_post(id):
         if len(body) < 1:
             flash('post is too short!', category='error')
         else:
-            # new_post = Post(body = body, author_id = current_user.id, img = picdata)
             post.body = body
             post.img = picdata
-            # db.session.add(new_post)
             db.session.commit()
             flash('Post is updated!', category='success')
             return redirect(url_for('views.home'))
